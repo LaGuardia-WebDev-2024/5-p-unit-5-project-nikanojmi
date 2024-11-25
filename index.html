@@ -16,17 +16,119 @@ Select ONE Additional Feature to Add
 
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>NEW MUSIC</title>
+    <meta charset="utf-8" />
+    <style>
+      h1 {
+        color: rgb(215, 46, 43);
+      }
+      h2 {
+        color: rgb(249, 126, 124);
+      }
+      body {
+        background-color: rgb(97, 16, 15);
+      }
+      p {
+        color: rgb(229, 174, 174);
+      }
+      .photo-gallery {
+        background-color: rgb(225, 254, 217);
+      }
+      .flip-card {
+        background-color: transparent;
+        width: 300px;
+        height: 200px;
+        border: 1px solid #f1f1f1;
+        perspective: 1000px; /* Remove this if you don't want the 3D effect */
+      }
 
-<head>
-  <title>Unit 5 Project</title>
-  <meta charset="utf-8">
-  <style>
+      /* This container is needed to position the front and back side */
+      .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+      }
 
-  </style>
-</head>
-<body>
+      /* Do an horizontal flip when you move the mouse over the flip box container */
+      .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+      }
 
- 
+      /* Position the front and back side */
+      .flip-card-front,
+      .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden; /* Safari */
+        backface-visibility: hidden;
+      }
 
-</body>
+      /* Style the front side (fallback if image is missing) */
+      .flip-card-front {
+        background-color: #bbb;
+        color: black;
+      }
+
+      /* Style the back side */
+      .flip-card-back {
+        background-color: dodgerblue;
+        color: white;
+        transform: rotateY(180deg);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>I better see you at the New Music Show!</h1>
+
+    <h2>All About New Music</h2>
+
+    <p>
+      New Music is a singer and songwriter class at Lagaurdia high school, where
+      musicians, singers and songwriters get together to workshop their musical
+      crafts as an ensamble. This class is directed by Robert Apostle, who is a
+      fantastic mentor, teacher, and pianist. He a bit cray cray but we love
+      him.
+    </p>
+
+    <h1>robert Apostle Core</h1>
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img
+            src="https://cdn.glitch.global/0df8e106-ce28-4623-805a-0b389c874658/thumbnails%2FIMG-4091%20(1).jpg?1732201646426"
+            alt="Avatar"
+            style="width: 300px; height: 300px"
+          />
+        </div>
+        <div class="flip-card-back">
+          <h1>Bobby Apostle</h1>
+          <p>Cool and crazy piano guy</p>
+          <p>We love him</p>
+        </div>
+      </div>
+    </div>
+
+    <img
+      src="https://mail.google.com/mail/u/0?ui=2&ik=7475f66ead&attid=0.1.1&permmsgid=msg-f:1816254182791570177&th=1934a18e6b1be301&view=fimg&fur=ip&permmsgid=msg-f:1816254182791570177&sz=s0-l75-ft&attbid=ANGjdJ9EVyI9MYuExWx6FVSa7benlAsUvDSNelP3rmoJ2lAjMKhqZp0a_nIY7qa1CtMGlzGXSgjaMWOIQ2iquZ4RotoUxyeYHKR8BubKxPzp0Hxmt3VPICqpi40XFq8&disp=emb&zw"
+      width="250"
+    />
+
+    <img
+      src="https://cdn.glitch.global/0df8e106-ce28-4623-805a-0b389c874658/IMG-4097.jpg?v=1732201414989"
+      width="200"
+    />
+    <img
+      src="https://cdn.glitch.global/0df8e106-ce28-4623-805a-0b389c874658/IMG-4096.jpg?v=1732201589441"
+      width="200"
+    />
+    <img
+      src="https://cdn.glitch.global/0df8e106-ce28-4623-805a-0b389c874658/IMG-4091%20(1).jpg?v=1732201646426"
+      width="200"
+    />
+  </body>
 </html>
